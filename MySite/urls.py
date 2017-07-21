@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^dress/', include('Dress.urls')),
     url(r'^now$', views.get_now),
+    url(r'^inherits$', views.inheritance_test)
 ]

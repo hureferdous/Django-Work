@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
 import datetime
 
 
@@ -20,3 +19,8 @@ def say_hello(request):
 def get_now(request):
     now = datetime.datetime.now()
     return render(request, "HelloWorld/base.html", {"current_date":now})
+
+def inheritance_test(request):
+    return render(request, "HelloWorld/home.html",
+                  {"a_variable":"I have a child template",
+                   "another_variable":"Me Too!"})
